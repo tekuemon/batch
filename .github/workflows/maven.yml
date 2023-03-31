@@ -34,5 +34,8 @@ jobs:
     - name: Run 
       run: java -cp 'target/batch-1.0-SNAPSHOT.jar:lib/*' org.springframework.batch.core.launch.support.CommandLineJobRunner META-INF/jobs/job01.xml job01
 
+    - name: Check directory
+      run: tree
+
     - name: Check result
       run: cat target/output.csv
